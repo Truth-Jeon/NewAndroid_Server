@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const multer = require('multer');
-const { DEC8_BIN } = require('mysql/lib/protocol/constants/charsets');
 const port = 3001;
 const connection = mysql.createConnection({
     host:'localhost',
@@ -77,7 +76,7 @@ app.post('/login', function(req, res) {
                 console.log("비밀번호가 틀렸습니다!");
             } else {
                 resultCode = 200;
-                message = '로그인 성공! ' + result[0].name +'님 환영합니다!';
+                message = '로그인 성공! 환영합니다!';
                 console.log("로그인 되었습니다.");
             }
         }
