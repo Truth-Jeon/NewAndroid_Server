@@ -107,7 +107,7 @@ app.post("/single", upload.single("image"), (req, res) => {
 app.post('/multiple', upload.array('images', 3), (req,res) => {
     console.log(req.files);
     res.send(`Multiple Files Upload Success`)
-})
+});
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}...`);
